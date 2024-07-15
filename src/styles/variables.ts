@@ -1,6 +1,10 @@
 import { CSSVariableGenerator } from "@/utils/CSSVariableGenerator"
 import { colors, utils } from "@/styles/tokens"
 
+// Read about CSSVariableGenerator in /src/utils/CSSVariableGenerator.ts. You
+// don't need to use it and could instead opt to hard-code your variables in
+// this file, but the class and methods can be helpful and reduce the need for
+// hard-coding them every time you add a new token.
 const colorVariablesConfig = new CSSVariableGenerator(colors, "color")
 const utilVariablesConfig = new CSSVariableGenerator(utils, "util")
 
