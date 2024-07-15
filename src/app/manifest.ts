@@ -6,6 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "NextJS Boiler",
     description:
       "A boilerplate for bootstrapping projects with NextJS, Emotion and Typescript",
+    // Icon files stored in /public dir
     icons: [
       {
         src: "/android-chrome-192x192.png",

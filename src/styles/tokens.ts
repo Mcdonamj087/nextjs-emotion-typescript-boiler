@@ -13,10 +13,10 @@ export const colors = {
   pink: "#A3066E",
 }
 
-// We're using Next Font with
+// Fonts defined in /src/styles/fonts.ts and are imported at /src/app/layout.tsx
+// using the variable approach
 export const fonts = {
-  bodyFontStack: `var(--font-family), -apple-system, 'Helvetica Neue', Arial, sans-serif`,
-  headingFontStack: `var(--font-heading)`,
+  fontStack: `var(--font-family), -apple-system, 'Helvetica Neue', Arial, sans-serif`,
 }
 
 export const utils = {

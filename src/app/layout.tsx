@@ -1,14 +1,7 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import EmotionStyleRegistry from "@/app/EmotionStyleRegistry"
 import GlobalStyles from "@/context/GlobalStyles"
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "800"],
-  variable: "--font-family",
-  display: "swap",
-})
+import { inter } from "@/styles/fonts"
 
 export default async function RootLayout({
   children,

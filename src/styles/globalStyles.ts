@@ -60,11 +60,11 @@ const globalStyles: Interpolation<Theme> = {
   },
 
   body: {
-    fontFamily: tokens.fonts.bodyFontStack,
+    fontFamily: tokens.fonts.fontStack,
   },
 
   button: {
-    fontFamily: tokens.fonts.bodyFontStack,
+    fontFamily: tokens.fonts.fontStack,
   },
 
   input: {

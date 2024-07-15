@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: false,
   env: {
-    AUTH_SECRET: process.env.AUTH_SECRET || "",
     SITE_URL: process.env.SITE_URL,
     API_URL: process.env.API_URL,
   },
@@ -14,7 +13,7 @@ const nextConfig = {
   trailingSlash: true,
   webpack(config) {
     // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find(rule =>
+    const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.(".svg")
     )
 
