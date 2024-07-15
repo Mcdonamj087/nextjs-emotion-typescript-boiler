@@ -1,0 +1,25 @@
+#!/bin/sh
+
+PREFIX="\033[1;35mpre-commit:\33[0m"
+
+# Run yarn typecheck
+echo "\033[1;32mRunning yarn typecheck...\033[0m"
+if ! yarn typecheck; then
+  echo "\n\n"
+  echo "$PREFIX \-33[1;31mTypecheck failed. Please fix the type errors before committing.\033[0m"
+  echo "$PREFIX \-33[1;31mYou can check manually via 'yarn typecheck'.\033[0m\n"
+  exit 1
+fi
+
+# Run yarn lint
+echo "\033[1;32mRunning yarn lint...\033[0m"
+fileList=$(git diff --diff-filter=d --cached --name-only | grep -E "\.(js|jsx|ts|tsx)$" | grep -v "\.vscode/")
+
+if [ ${#fileList} -gt 0 ]; then
+  if ! echo $fileList | xargs yarn eslint --max-warnings=0; then
+    echo "\n\n"
+    echo "$PREFIX \-33[1;31mLinting failed. Please fix the lint violations above before committing.\033[0m"
+    echo "$PREFIX \-33[1;31mYou can check manually via 'yarn lint'.\033[0m\n"
+    exit 1
+  fi
+fi

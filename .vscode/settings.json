@@ -1,0 +1,11 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#fff",
+    "titleBar.inactiveForeground": "#fff",
+    "titleBar.activeBackground": "#2D1980",
+    "titleBar.inactiveBackground": "#2D1980"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // tells vscode to use absolute imports for intellisense
+  "typescript.preferences.importModuleSpecifier": "non-relative"
+}

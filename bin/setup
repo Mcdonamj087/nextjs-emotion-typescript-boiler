@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Install pre-commit hook if .git/hooks exists
+if [ -d ".git/hooks" ]; then
+  cp bin/pre-commit .git/hooks/pre-commit
+fi
