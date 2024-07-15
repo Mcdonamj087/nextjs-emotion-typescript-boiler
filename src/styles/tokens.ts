@@ -9,6 +9,7 @@ export const colors = {
   orange: "#B4520C",
   red: "#8A0E0E",
   purple: "#5A0A67",
+  violet: "#2D1980",
   pink: "#A3066E",
 }
 

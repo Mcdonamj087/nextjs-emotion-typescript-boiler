@@ -55,6 +55,21 @@ export type Pascalize<T extends string> = T extends `${infer A} ${infer B}`
   ? `${Capitalize<A>}${Capitalize<B>}`
   : T
 
+/**
+ * A utility type that captures the type of the entries of an object, mimicking the
+ * return type of `Object.entries`. It maps each property of a given object type `T`
+ * to a tuple containing the property name and its value, resulting in an array of these tuples.
+ *
+ * ```ts
+ * const example = {
+ *   foo: 42,
+ *   bar: "hello",
+ * }
+ *
+ * type Example = Entries<typeof example>
+ * // The resulting type would look like:
+ * // (["foo", number] | ["bar", string])[]
+ */
 export type Entries<T> = {
   [K in keyof T]: [K, T[K]]
 }[keyof T][]
